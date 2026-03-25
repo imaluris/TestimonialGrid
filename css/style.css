@@ -1,12 +1,11 @@
 body {
   margin: 0;
-  padding: 40px;
   background-color: hsl(0, 0%, 96%);
   box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   font-family: "Barlow Semi Condensed", sans-serif;
   color: hsla(0, 0%, 0%, 0.7);
 }
@@ -17,7 +16,7 @@ body {
   justify-content: center;
 
   column-gap: 30px;
-  row-gap:25px;
+  row-gap: 25px;
   width: 100%;
   max-width: 1100px;
 }
@@ -104,4 +103,39 @@ img {
   border-radius: 10px;
   padding: 30px;
   box-shadow: 40px 40px 40px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 1050px) {
+  body {
+    padding: 30px;
+  }
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .card1 {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .card2 {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .card3 {
+    grid-column: 1;
+    grid-row: 5;
+  }
+
+  .card4 {
+    grid-column: 1;
+    grid-row: 3;
+    z-index: 15;
+  }
+
+  .card5 {
+    grid-column: 1;
+    grid-row: 4;
+  }
 }
